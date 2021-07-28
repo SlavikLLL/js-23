@@ -21,7 +21,9 @@ function cacheFunc(func){
 }
 function foo(x){
    
-    
+if(cache.size>10){
+    cache.delete(x-1);
+}    
     return console.log(x+10);
    
 }
